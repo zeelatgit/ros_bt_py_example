@@ -1,0 +1,3 @@
+[submodule "src/utils/ros2_ros_bt_py"]
+	path = src/utils/ros2_ros_bt_py
+	url = https://github.com/fzi-forschungszentrum-informatik/ros2_ros_bt_py.git

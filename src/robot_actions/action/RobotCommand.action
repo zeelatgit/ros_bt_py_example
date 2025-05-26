@@ -1,0 +1,11 @@
+# Request
+string command      # 'go_to_home', 'go_to_home_n_charge' or 'execute_dummy_action'
+---
+# Result
+bool success            # Whether the action completed successfully
+string message         # Status or error message
+uint8 battery_status   # Battery power supply status (for execute_dummy_action)
+---
+# Feedback
+float32 progress       # Progress percentage (0-100)
+string status         # Current status message

@@ -1,0 +1,10 @@
+.github/
+.vscode/
+docs/
+.pytest_cache/
+src/.pytest_cache/
+src/example_package/.pytest_cache/
+
+build/
+install/
+log/
