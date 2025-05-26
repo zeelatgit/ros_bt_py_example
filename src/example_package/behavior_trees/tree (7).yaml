@@ -1,0 +1,486 @@
+name: ''
+path: ''
+root_name: Sequence
+nodes:
+  - module: ros_bt_py.nodes.sequence
+    node_class: Sequence
+    version: 0.1.0
+    max_children: -1
+    name: Sequence_4
+    child_names:
+      - TopicSubscriber
+      - MessageToFields
+      - TopicSubscriber_2
+      - MessageToFields_2
+      - Fallback
+    options: []
+    inputs: []
+    outputs: []
+    state: SHUTDOWN
+  - module: ros_bt_py.ros_nodes.topic
+    node_class: TopicSubscriber
+    version: 0.1.0
+    max_children: 0
+    name: TopicSubscriber
+    child_names: []
+    options:
+      - key: topic_type
+        serialized_value: >-
+          {"py/object": "ros_bt_py.custom_types.RosTopicType", "type_str":
+          "sensor_msgs/msg/BatteryState"}
+        serialized_type: '{"py/type": "ros_bt_py.custom_types.RosTopicType"}'
+      - key: topic_name
+        serialized_value: >-
+          {"py/object": "ros_bt_py.custom_types.RosTopicName", "name":
+          "/battery_level"}
+        serialized_type: '{"py/type": "ros_bt_py.custom_types.RosTopicName"}'
+      - key: reliable
+        serialized_value: 'true'
+        serialized_type: '{"py/type": "builtins.bool"}'
+      - key: transient_local
+        serialized_value: 'true'
+        serialized_type: '{"py/type": "builtins.bool"}'
+      - key: depth
+        serialized_value: '1'
+        serialized_type: '{"py/type": "builtins.int"}'
+    inputs: []
+    outputs:
+      - key: message
+        serialized_value: 'null'
+        serialized_type: '{"py/type": "sensor_msgs.msg._battery_state.BatteryState"}'
+    state: SHUTDOWN
+  - module: ros_bt_py.ros_nodes.message_converters
+    node_class: MessageToFields
+    version: 0.1.0
+    max_children: 0
+    name: MessageToFields
+    child_names: []
+    options:
+      - key: input_type
+        serialized_value: >-
+          {"py/object": "ros_bt_py.custom_types.RosTopicType", "type_str":
+          "sensor_msgs/msg/BatteryState"}
+        serialized_type: '{"py/type": "ros_bt_py.custom_types.RosTopicType"}'
+    inputs:
+      - key: in
+        serialized_value: 'null'
+        serialized_type: '{"py/type": "sensor_msgs.msg._battery_state.BatteryState"}'
+    outputs:
+      - key: header
+        serialized_value: 'null'
+        serialized_type: '{"py/type": "std_msgs.msg._header.Header"}'
+      - key: voltage
+        serialized_value: 'null'
+        serialized_type: '{"py/type": "builtins.float"}'
+      - key: temperature
+        serialized_value: 'null'
+        serialized_type: '{"py/type": "builtins.float"}'
+      - key: current
+        serialized_value: 'null'
+        serialized_type: '{"py/type": "builtins.float"}'
+      - key: charge
+        serialized_value: 'null'
+        serialized_type: '{"py/type": "builtins.float"}'
+      - key: capacity
+        serialized_value: 'null'
+        serialized_type: '{"py/type": "builtins.float"}'
+      - key: design_capacity
+        serialized_value: 'null'
+        serialized_type: '{"py/type": "builtins.float"}'
+      - key: percentage
+        serialized_value: 'null'
+        serialized_type: '{"py/type": "builtins.float"}'
+      - key: power_supply_status
+        serialized_value: 'null'
+        serialized_type: '{"py/type": "builtins.int"}'
+      - key: power_supply_health
+        serialized_value: 'null'
+        serialized_type: '{"py/type": "builtins.int"}'
+      - key: power_supply_technology
+        serialized_value: 'null'
+        serialized_type: '{"py/type": "builtins.int"}'
+      - key: present
+        serialized_value: 'null'
+        serialized_type: '{"py/type": "builtins.bool"}'
+      - key: cell_voltage
+        serialized_value: 'null'
+        serialized_type: '{"py/type": "array.array"}'
+      - key: cell_temperature
+        serialized_value: 'null'
+        serialized_type: '{"py/type": "array.array"}'
+      - key: location
+        serialized_value: 'null'
+        serialized_type: '{"py/type": "builtins.str"}'
+      - key: serial_number
+        serialized_value: 'null'
+        serialized_type: '{"py/type": "builtins.str"}'
+    state: SHUTDOWN
+  - module: ros_bt_py.ros_nodes.topic
+    node_class: TopicSubscriber
+    version: 0.1.0
+    max_children: 0
+    name: TopicSubscriber_2
+    child_names: []
+    options:
+      - key: topic_type
+        serialized_value: >-
+          {"py/object": "ros_bt_py.custom_types.RosTopicType", "type_str":
+          "std_msgs/msg/String"}
+        serialized_type: '{"py/type": "ros_bt_py.custom_types.RosTopicType"}'
+      - key: topic_name
+        serialized_value: >-
+          {"py/object": "ros_bt_py.custom_types.RosTopicName", "name":
+          "/command_topic"}
+        serialized_type: '{"py/type": "ros_bt_py.custom_types.RosTopicName"}'
+      - key: reliable
+        serialized_value: 'true'
+        serialized_type: '{"py/type": "builtins.bool"}'
+      - key: transient_local
+        serialized_value: 'true'
+        serialized_type: '{"py/type": "builtins.bool"}'
+      - key: depth
+        serialized_value: '3'
+        serialized_type: '{"py/type": "builtins.int"}'
+    inputs: []
+    outputs:
+      - key: message
+        serialized_value: 'null'
+        serialized_type: '{"py/type": "std_msgs.msg._string.String"}'
+    state: SHUTDOWN
+  - module: ros_bt_py.ros_nodes.message_converters
+    node_class: MessageToFields
+    version: 0.1.0
+    max_children: 0
+    name: MessageToFields_2
+    child_names: []
+    options:
+      - key: input_type
+        serialized_value: >-
+          {"py/object": "ros_bt_py.custom_types.RosTopicType", "type_str":
+          "std_msgs/msg/String"}
+        serialized_type: '{"py/type": "ros_bt_py.custom_types.RosTopicType"}'
+    inputs:
+      - key: in
+        serialized_value: 'null'
+        serialized_type: '{"py/type": "std_msgs.msg._string.String"}'
+    outputs:
+      - key: data
+        serialized_value: 'null'
+        serialized_type: '{"py/type": "builtins.str"}'
+    state: SHUTDOWN
+  - module: ros_bt_py.nodes.fallback
+    node_class: Fallback
+    version: 0.1.0
+    max_children: -1
+    name: Fallback
+    child_names:
+      - Sequence_2
+      - Sequence_3
+    options: []
+    inputs: []
+    outputs: []
+    state: SHUTDOWN
+  - module: ros_bt_py.nodes.sequence
+    node_class: Sequence
+    version: 0.1.0
+    max_children: -1
+    name: Sequence_2
+    child_names:
+      - Constant
+      - ALessThanB
+      - Action
+    options: []
+    inputs: []
+    outputs: []
+    state: SHUTDOWN
+  - module: ros_bt_py.nodes.constant
+    node_class: Constant
+    version: 0.1.0
+    max_children: 0
+    name: Constant
+    child_names: []
+    options:
+      - key: constant_type
+        serialized_value: '{"py/type": "builtins.float"}'
+        serialized_type: >-
+          {"py/object": "ros_bt_py.custom_types.TypeWrapper", "actual_type":
+          {"py/type": "builtins.type"}, "info": "builtin"}
+      - key: constant_value
+        serialized_value: '15.0'
+        serialized_type: '{"py/type": "builtins.float"}'
+    inputs: []
+    outputs:
+      - key: constant
+        serialized_value: 'null'
+        serialized_type: '{"py/type": "builtins.float"}'
+    state: SHUTDOWN
+  - module: ros_bt_py.nodes.compare
+    node_class: ALessThanB
+    version: 0.1.0
+    max_children: 0
+    name: ALessThanB
+    child_names: []
+    options: []
+    inputs:
+      - key: a
+        serialized_value: 'null'
+        serialized_type: '{"py/type": "builtins.float"}'
+      - key: b
+        serialized_value: 'null'
+        serialized_type: '{"py/type": "builtins.float"}'
+    outputs: []
+    state: SHUTDOWN
+  - module: ros_bt_py.ros_nodes.action
+    node_class: Action
+    version: 0.1.0
+    max_children: 0
+    name: Action
+    child_names: []
+    options:
+      - key: action_type
+        serialized_value: >-
+          {"py/object": "ros_bt_py.custom_types.RosActionType", "type_str":
+          "robot_actions/action/RobotCommand"}
+        serialized_type: '{"py/type": "ros_bt_py.custom_types.RosActionType"}'
+      - key: action_name
+        serialized_value: >-
+          {"py/object": "ros_bt_py.custom_types.RosActionName", "name":
+          "/robot_action"}
+        serialized_type: '{"py/type": "ros_bt_py.custom_types.RosActionName"}'
+      - key: wait_for_action_server_seconds
+        serialized_value: '1.2'
+        serialized_type: '{"py/type": "builtins.float"}'
+      - key: timeout_seconds
+        serialized_value: '2.0'
+        serialized_type: '{"py/type": "builtins.float"}'
+      - key: fail_if_not_available
+        serialized_value: 'true'
+        serialized_type: '{"py/type": "builtins.bool"}'
+    inputs:
+      - key: command
+        serialized_value: 'null'
+        serialized_type: '{"py/type": "builtins.str"}'
+    outputs:
+      - key: result_success
+        serialized_value: 'null'
+        serialized_type: '{"py/type": "builtins.bool"}'
+      - key: result_message
+        serialized_value: 'null'
+        serialized_type: '{"py/type": "builtins.str"}'
+      - key: result_battery_status
+        serialized_value: 'null'
+        serialized_type: '{"py/type": "builtins.int"}'
+      - key: feedback_progress
+        serialized_value: 'null'
+        serialized_type: '{"py/type": "builtins.float"}'
+      - key: feedback_status
+        serialized_value: 'null'
+        serialized_type: '{"py/type": "builtins.str"}'
+    state: SHUTDOWN
+  - module: ros_bt_py.nodes.sequence
+    node_class: Sequence
+    version: 0.1.0
+    max_children: -1
+    name: Sequence_3
+    child_names:
+      - Constant_2
+      - Action_2
+    options: []
+    inputs: []
+    outputs: []
+    state: SHUTDOWN
+  - module: ros_bt_py.nodes.constant
+    node_class: Constant
+    version: 0.1.0
+    max_children: 0
+    name: Constant_2
+    child_names: []
+    options:
+      - key: constant_type
+        serialized_value: '{"py/type": "builtins.str"}'
+        serialized_type: >-
+          {"py/object": "ros_bt_py.custom_types.TypeWrapper", "actual_type":
+          {"py/type": "builtins.type"}, "info": "builtin"}
+      - key: constant_value
+        serialized_value: '"go_to_home_n_charge"'
+        serialized_type: '{"py/type": "builtins.str"}'
+    inputs: []
+    outputs:
+      - key: constant
+        serialized_value: 'null'
+        serialized_type: '{"py/type": "builtins.str"}'
+    state: SHUTDOWN
+  - module: ros_bt_py.ros_nodes.action
+    node_class: Action
+    version: 0.1.0
+    max_children: 0
+    name: Action_2
+    child_names: []
+    options:
+      - key: action_type
+        serialized_value: >-
+          {"py/object": "ros_bt_py.custom_types.RosActionType", "type_str":
+          "robot_actions/action/RobotCommand"}
+        serialized_type: '{"py/type": "ros_bt_py.custom_types.RosActionType"}'
+      - key: action_name
+        serialized_value: >-
+          {"py/object": "ros_bt_py.custom_types.RosActionName", "name":
+          "/robot_action"}
+        serialized_type: '{"py/type": "ros_bt_py.custom_types.RosActionName"}'
+      - key: wait_for_action_server_seconds
+        serialized_value: '1.2'
+        serialized_type: '{"py/type": "builtins.float"}'
+      - key: timeout_seconds
+        serialized_value: '1.2'
+        serialized_type: '{"py/type": "builtins.float"}'
+      - key: fail_if_not_available
+        serialized_value: 'true'
+        serialized_type: '{"py/type": "builtins.bool"}'
+    inputs:
+      - key: command
+        serialized_value: 'null'
+        serialized_type: '{"py/type": "builtins.str"}'
+    outputs:
+      - key: result_success
+        serialized_value: 'null'
+        serialized_type: '{"py/type": "builtins.bool"}'
+      - key: result_message
+        serialized_value: 'null'
+        serialized_type: '{"py/type": "builtins.str"}'
+      - key: result_battery_status
+        serialized_value: 'null'
+        serialized_type: '{"py/type": "builtins.int"}'
+      - key: feedback_progress
+        serialized_value: 'null'
+        serialized_type: '{"py/type": "builtins.float"}'
+      - key: feedback_status
+        serialized_value: 'null'
+        serialized_type: '{"py/type": "builtins.str"}'
+    state: SHUTDOWN
+data_wirings:
+  - source:
+      node_name: MessageToFields_2
+      data_kind: outputs
+      data_key: data
+    target:
+      node_name: Action
+      data_kind: inputs
+      data_key: command
+  - source:
+      node_name: Constant
+      data_kind: outputs
+      data_key: constant
+    target:
+      node_name: ALessThanB
+      data_kind: inputs
+      data_key: a
+  - source:
+      node_name: MessageToFields
+      data_kind: outputs
+      data_key: percentage
+    target:
+      node_name: ALessThanB
+      data_kind: inputs
+      data_key: b
+  - source:
+      node_name: Constant_2
+      data_kind: outputs
+      data_key: constant
+    target:
+      node_name: Action_2
+      data_kind: inputs
+      data_key: command
+  - source:
+      node_name: TopicSubscriber
+      data_kind: outputs
+      data_key: message
+    target:
+      node_name: MessageToFields
+      data_kind: inputs
+      data_key: in
+  - source:
+      node_name: TopicSubscriber_2
+      data_kind: outputs
+      data_key: message
+    target:
+      node_name: MessageToFields_2
+      data_kind: inputs
+      data_key: in
+tick_frequency_hz: 10
+state: EDITABLE
+public_node_data:
+  - node_name: MessageToFields
+    data_kind: outputs
+    data_key: header
+  - node_name: MessageToFields
+    data_kind: outputs
+    data_key: voltage
+  - node_name: MessageToFields
+    data_kind: outputs
+    data_key: temperature
+  - node_name: MessageToFields
+    data_kind: outputs
+    data_key: current
+  - node_name: MessageToFields
+    data_kind: outputs
+    data_key: charge
+  - node_name: MessageToFields
+    data_kind: outputs
+    data_key: capacity
+  - node_name: MessageToFields
+    data_kind: outputs
+    data_key: design_capacity
+  - node_name: MessageToFields
+    data_kind: outputs
+    data_key: power_supply_status
+  - node_name: MessageToFields
+    data_kind: outputs
+    data_key: power_supply_health
+  - node_name: MessageToFields
+    data_kind: outputs
+    data_key: power_supply_technology
+  - node_name: MessageToFields
+    data_kind: outputs
+    data_key: present
+  - node_name: MessageToFields
+    data_kind: outputs
+    data_key: cell_voltage
+  - node_name: MessageToFields
+    data_kind: outputs
+    data_key: cell_temperature
+  - node_name: MessageToFields
+    data_kind: outputs
+    data_key: location
+  - node_name: MessageToFields
+    data_kind: outputs
+    data_key: serial_number
+  - node_name: Action
+    data_kind: outputs
+    data_key: result_success
+  - node_name: Action
+    data_kind: outputs
+    data_key: result_message
+  - node_name: Action
+    data_kind: outputs
+    data_key: result_battery_status
+  - node_name: Action
+    data_kind: outputs
+    data_key: feedback_progress
+  - node_name: Action
+    data_kind: outputs
+    data_key: feedback_status
+  - node_name: Action_2
+    data_kind: outputs
+    data_key: result_success
+  - node_name: Action_2
+    data_kind: outputs
+    data_key: result_message
+  - node_name: Action_2
+    data_kind: outputs
+    data_key: result_battery_status
+  - node_name: Action_2
+    data_kind: outputs
+    data_key: feedback_progress
+  - node_name: Action_2
+    data_kind: outputs
+    data_key: feedback_status
