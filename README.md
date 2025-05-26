@@ -49,6 +49,8 @@ We can execute a behavior tree with ros_bt_py to interact with our battery_simul
 ros2 launch ros_bt_py ros_bt_py.launch.py
 ```
 - Load the example package with the package loader. Type 'example_package.bt_nodes' and then click on 'Load Package'
+NOTE: You don't necessarily need this step for the existing behavior tree. All this does is, it loads the custom nodes, which resides in the example_package, to the webGUI. Your custom messages, services and actions should automatically be available in the GUI, after building your workspace. 
+  
 - Now upload 'tree (7).yaml' available in the directory 'behavior_trees'
 - You can now start the tree. To get a continuous process, you can select the 'Tick Periodically' option.
 - To execute an action publish a command on the topic '/command_topic':
