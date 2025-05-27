@@ -5,7 +5,7 @@ This repository has an experimental package to investigate and try out different
 This package requires ros_bt_py, which is already present as a submodule in this repo. To clone the contents of the repo along with the submodule use this command:
 
 ```bash
-git clone --recurse-submodules 
+git clone --recurse-submodules https://github.com/zeelatgit/ros_bt_py_example
 ```
 
 
